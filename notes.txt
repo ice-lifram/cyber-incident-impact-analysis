@@ -61,7 +61,8 @@ Day 1 - Data Investigation
 			-Still a mismatch: incident masters has more unique tickers
 	- In-depth analysis automated by AI with further analysis
 
--Possible Next Course of Action;
+- Possible Next Course of Action;
 	- Create a new dataset file that contains all the similar data points + data cleaning
 	- Finalize current objectives and formulate methodology
 	- Identifying the most attack vectors
+
