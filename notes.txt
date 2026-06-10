@@ -66,3 +66,13 @@ Day 1 - Data Investigation
 	- Finalize current objectives and formulate methodology
 	- Identifying the most attack vectors
 
+[] Dataset Audit Report
+[] Data Dictionary
+[] Data Mapping Report
+
+--------
+
+Day 1.2
+- Possible path
+	- Create three separate analysis for the three datasets, as there are Incident IDs in one dataset that doesn't appear in others
+	- Selective analysis for the Incident IDs that do appear in all three datasets, though this may lead to bias.

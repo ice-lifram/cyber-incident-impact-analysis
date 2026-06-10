@@ -89,3 +89,21 @@ VTL.TO     2
 OKON.L     2
 TBL        2
 
+
+Variables
+-
+- Non-negotiables:
+    - Total company revenue
+    - Company Names + Stock tickers
+    - Total Loss
+        - Lower and Upper Bound
+    - Recovery Costs
+    - Attack Vector
+    - ID, Incident Date
+- Considering:
+    - Prices before, the disclosure, and after
+    - Volume average before, disclosure, and after
+    - t-statistic and p-values
+    - Pre and post-incident volatility
+    - Days to price recovery
+    - Quality Grade

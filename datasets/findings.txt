@@ -1,0 +1,124 @@
+# Datasets information gathered through pandas
+
+2026 - 06 - 10
+
+<class 'pandas.DataFrame'>
+RangeIndex: 850 entries, 0 to 849
+Data columns (total 32 columns):
+ #   Column                    Non-Null Count  Dtype  
+---  ------                    --------------  -----  
+ 0   incident_id               850 non-null    str    
+ 1   company_name              850 non-null    str    
+ 2   company_revenue_usd       850 non-null    float64
+ 3   country_hq                850 non-null    str    
+ 4   industry_primary          850 non-null    str    
+ 5   industry_secondary        153 non-null    str    
+ 6   employee_count            850 non-null    int64  
+ 7   is_public_company         850 non-null    bool   
+ 8   stock_ticker              412 non-null    str    
+ 9   incident_date             850 non-null    str    
+ 10  incident_date_estimated   850 non-null    bool   
+ 11  discovery_date            850 non-null    str    
+ 12  disclosure_date           850 non-null    str    
+ 13  attack_vector_primary     850 non-null    str    
+ 14  attack_vector_secondary   211 non-null    str    
+ 15  attack_chain              575 non-null    str    
+ 16  attributed_group          482 non-null    str    
+ 17  attribution_confidence    482 non-null    str    
+ 18  data_compromised_records  602 non-null    float64
+ 19  data_type                 602 non-null    str    
+ 20  systems_affected          850 non-null    str    
+ 21  downtime_hours            420 non-null    float64
+ 22  data_source_primary       850 non-null    str    
+ 23  data_source_secondary     386 non-null    str    
+ 24  data_source_type          850 non-null    str    
+ 25  confidence_tier           850 non-null    int64  
+ 26  quality_score             850 non-null    float64
+ 27  quality_grade             850 non-null    str    
+ 28  review_flag               70 non-null     str    
+ 29  notes                     214 non-null    str    
+ 30  created_at                850 non-null    str    
+ 31  updated_at                850 non-null    str    
+dtypes: bool(2), float64(4), int64(2), str(24)
+memory usage: 201.0 KB
+None
+
+<class 'pandas.DataFrame'>
+RangeIndex: 778 entries, 0 to 777
+Data columns (total 19 columns):
+ #   Column                  Non-Null Count  Dtype  
+---  ------                  --------------  -----  
+ 0   incident_id             778 non-null    str    
+ 1   direct_loss_usd         778 non-null    float64
+ 2   direct_loss_method      778 non-null    str    
+ 3   ransom_demanded_usd     206 non-null    float64
+ 4   ransom_paid_usd         86 non-null     float64
+ 5   ransom_source           86 non-null     str    
+ 6   recovery_cost_usd       778 non-null    float64
+ 7   legal_fees_usd          778 non-null    float64
+ 8   regulatory_fine_usd     132 non-null    float64
+ 9   insurance_payout_usd    435 non-null    float64
+ 10  total_loss_usd          778 non-null    float64
+ 11  total_loss_method       778 non-null    str    
+ 12  total_loss_lower_bound  778 non-null    float64
+ 13  total_loss_upper_bound  778 non-null    float64
+ 14  inflation_adjusted_usd  778 non-null    float64
+ 15  cpi_index_used          778 non-null    str    
+ 16  notes                   248 non-null    str    
+ 17  created_at              778 non-null    str    
+ 18  updated_at              778 non-null    str    
+dtypes: float64(11), str(8)
+memory usage: 115.6 KB
+None
+
+<class 'pandas.DataFrame'>
+RangeIndex: 358 entries, 0 to 357
+Data columns (total 31 columns):
+ #   Column                           Non-Null Count  Dtype  
+---  ------                           --------------  -----  
+ 0   incident_id                      358 non-null    str    
+ 1   stock_ticker                     358 non-null    str    
+ 2   price_7d_before                  358 non-null    float64
+ 3   price_disclosure_day             358 non-null    float64
+ 4   price_1d_after                   358 non-null    float64
+ 5   price_7d_after                   358 non-null    float64
+ 6   price_30d_after                  358 non-null    float64
+ 7   volume_avg_30d_baseline          358 non-null    int64  
+ 8   volume_disclosure_day            358 non-null    int64  
+ 9   sector_index                     358 non-null    str    
+ 10  sector_return_same_period        358 non-null    float64
+ 11  abnormal_return_1d               358 non-null    float64
+ 12  abnormal_return_7d               358 non-null    float64
+ 13  abnormal_return_30d              358 non-null    float64
+ 14  car_neg1_to_pos1                 358 non-null    float64
+ 15  car_0_to_7                       358 non-null    float64
+ 16  car_0_to_30                      358 non-null    float64
+ 17  car_0_to_90                      358 non-null    float64
+ 18  t_statistic_1d                   358 non-null    float64
+ 19  p_value_1d                       358 non-null    float64
+ 20  t_statistic_30d                  358 non-null    float64
+ 21  p_value_30d                      358 non-null    float64
+ 22  earnings_announcement_within_7d  358 non-null    bool   
+ 23  market_cap_at_disclosure         358 non-null    float64
+ 24  volume_ratio_disclosure          358 non-null    float64
+ 25  pre_incident_volatility_30d      358 non-null    float64
+ 26  post_incident_volatility_30d     358 non-null    float64
+ 27  days_to_price_recovery           322 non-null    float64
+ 28  notes                            92 non-null     str    
+ 29  created_at                       358 non-null    str    
+ 30  updated_at                       358 non-null    str    
+dtypes: bool(1), float64(22), int64(2), str(6)
+memory usage: 84.4 KB
+None
+
+
+       total_loss_usd  direct_loss_usd  recovery_cost_usd  legal_fees_usd  regulatory_fine_usd  data_compromised_records  downtime_hours  company_revenue_usd  employee_count
+count    7.780000e+02     7.780000e+02       7.780000e+02    7.780000e+02         1.320000e+02              5.560000e+02      388.000000         7.780000e+02    7.780000e+02
+mean     7.099600e+07     3.652294e+07       2.618556e+07    7.309469e+06         2.834303e+06              2.873457e+06      110.396340         1.031610e+10    5.499647e+04
+std      2.151881e+08     1.196191e+08       7.816093e+07    2.390878e+07         7.363815e+06              3.097915e+07      190.235888         2.104743e+10    1.298966e+05
+min      1.737931e+05     9.000000e+04       5.703142e+04    1.276379e+04         5.000000e+04              1.000000e+03        1.830000         2.424181e+07    6.700000e+01
+25%      6.166441e+06     2.834239e+06       2.055169e+06    4.748212e+05         2.771979e+05              1.209950e+04       26.110000         2.565924e+08    1.138000e+03
+50%      1.656491e+07     8.525071e+06       6.129803e+06    1.506969e+06         9.141517e+05              5.613300e+04       54.380000         1.322520e+09    6.266000e+03
+75%      5.259585e+07     2.609037e+07       1.840980e+07    4.756604e+06         2.106179e+06              2.945730e+05      122.017500         8.692943e+09    4.359475e+04
+max      3.451548e+09     2.302300e+09       1.238193e+09    3.828183e+08         5.114644e+07              5.497365e+08     1951.620000         1.488980e+11    1.411332e+06
+
