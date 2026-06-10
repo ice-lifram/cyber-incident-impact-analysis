@@ -1,0 +1,67 @@
+ROE:
+Methods of Analysis
+- Z-score
+A Z-score quantifies the distance of a data point from the mean in terms of standard deviations. 
+
+Z = (X - mu) / sigma
+Where:
+
+Z = Z-score
+X = specific data point
+μ (mu) = mean of the dataset
+σ (sigma) = standard deviation of the dataset
+
+If z-score is greater than 3 or less than -3
+
+z > 2, unusual
+z > 3, anomalous
+
+- Mean Assets
+- Standard Deviation
+
+Dataset: https://www.kaggle.com/datasets/aryanmdev/cyber-attacks-financial-and-market-impact
+
+What does the dataset contain?
+
+Financial Impact:
+	- Recovery cost
+	- Total Loss
+		- Upper and Lower Bounds
+
+Market Impact
+	- Stock Ticker
+	- Price 
+	- Volume Average
+	- Sector Index, Return, 
+	- Abnormal Returns
+	- T-stat and p values
+	- Market Cap
+	- Volume Center Disclosure
+	- Pre and Post-incident volatility
+	- Number of days to price recovery
+
+Incident Master
+	- Revenues
+	- Company Lists
+	- Employee Counts
+	- Attack Vector
+	- Quality Grade
+
+----------------------------------------------------------------
+
+Day 1 - Data Investigation
+- Audit
+	- Discoveries
+		- Data IDs on three datasets seems to be mismatched (missing incident IDs)
+		- Number of Rows including header row
+			- incidents_master.csv : 851
+			- market_impact.csv : 359
+			- financial_impact.csv : 779
+		- The incident IDs that has been included on all three datasets contains the same stock ticker in incident master and market impact
+			-Still a mismatch: incident masters has more unique tickers
+	- In-depth analysis automated by AI with further analysis
+
+-Possible Next Course of Action;
+	- Create a new dataset file that contains all the similar data points + data cleaning
+	- Finalize current objectives and formulate methodology
+	- Identifying the most attack vectors
