@@ -1,0 +1,134 @@
+ROE:
+Methods of Analysis
+- Z-score
+A Z-score quantifies the distance of a data point from the mean in terms of standard deviations. 
+
+Z = (X - mu) / sigma
+Where:
+
+Z = Z-score
+X = specific data point
+μ (mu) = mean of the dataset
+σ (sigma) = standard deviation of the dataset
+
+If z-score is greater than 3 or less than -3
+
+z > 2, unusual
+z > 3, anomalous
+
+- Mean Assets
+- Standard Deviation
+
+Dataset: https://www.kaggle.com/datasets/aryanmdev/cyber-attacks-financial-and-market-impact
+
+What does the dataset contain?
+
+Financial Impact:
+	- Recovery cost
+	- Total Loss
+		- Upper and Lower Bounds
+
+Market Impact
+	- Stock Ticker
+	- Price 
+	- Volume Average
+	- Sector Index, Return, 
+	- Abnormal Returns
+	- T-stat and p values
+	- Market Cap
+	- Volume Center Disclosure
+	- Pre and Post-incident volatility
+	- Number of days to price recovery
+
+Incident Master
+	- Revenues
+	- Company Lists
+	- Employee Counts
+	- Attack Vector
+	- Quality Grade
+
+----------------------------------------------------------------
+
+Day 1 - Data Investigation
+- Audit
+	- Discoveries
+		- Data IDs on three datasets seems to be mismatched (missing incident IDs)
+		- Number of Rows including header row
+			- incidents_master.csv : 851
+			- market_impact.csv : 359
+			- financial_impact.csv : 779
+		- The incident IDs that has been included on all three datasets contains the same stock ticker in incident master and market impact
+			-Still a mismatch: incident masters has more unique tickers
+	- In-depth analysis automated by AI with further analysis
+
+- Possible Next Course of Action;
+	- Create a new dataset file that contains all the similar data points + data cleaning
+	- Finalize current objectives and formulate methodology
+	- Identifying the most attack vectors
+
+[] Dataset Audit Report
+[] Data Dictionary
+[] Data Mapping Report
+
+--------
+
+Day 1.2
+- Possible path
+	- Create three separate analysis for the three datasets, as there are Incident IDs in one dataset that doesn't appear in others
+	- Selective analysis for the Incident IDs that do appear in all three datasets, though this may lead to bias.
+
+----------------------------------------------------
+Day 2: Continuation of EDA + Preliminary Data Analysis
+Total common IDs,  329
+Unique in Financial:
+0
+Unique in Market:
+0
+Similar to all three:
+329
+Data Points of Market
+Length:  358
+
+- All Financial Data Points and Market Data Points have matching results
+- 329 over 358 data points are similar in all data points
+
+- Final methodology decision: Multistage analysis of datasets
+	- Stage 1: Operational Incidents Masters Analysis (n = 850)
+		- The most common attack vectors
+		- The impact of each attacks on companies
+			- Includes downtime hours, data compromised records
+		- Quality Score and Grade Analysis
+		- Qualitative Analysis on the datasets' additional notes
+	- Stage 2: Financial Impact Analysis (n = 778)
+		- Direct Losses
+		- Total Losses
+		- Ransoms
+	- Stage 3: Market Impact Analysis (n = 357)
+		- Price before, during, and after disclosure
+		- Volume average
+		- Abnormal returns
+		- T statistic and p values
+		- Pre and post incident volatility
+		- Days to price recovery
+
+	- Note, n = population size
+
+
+- Current changes:
+	- Python scripting for Dataset Analysis + refactoring
+
+Slight redefinition of objectives:
+
+More clearly:
+1. Analyze operational characteristics and severity of cyber incidents on that Incident Masters Dataset (basically more on quali+quanti analysis due to the lack of numerical data; this dataset is now treated as the characteristics of the companies, the common attack vectors, downtime hours, the revenue)
+
+2. Analyze the financial impacts of cyber incidents with the Financial Impact dataset (I can determine it by analyzing the price and volume average losses)
+
+ 3. Analyze the market reaction to cyber incident disclosures using the Market Impact Dataset (basically the same as the financial impacts, but for the prices at the market during cyber incident disclosures. Additionally, the abnormal returns, t-statistics and p-values, market cap, and the volatility)
+
+Since this was a numerical and descriptive statistics, values such as company names, stock tickers, and quality scores are disregarded. Employee counts are also disregarded, as it is highly connected to a specific company.
+
+---------------------------------------
+The confidence_tier variable was excluded from analysis because the dataset documentation did not define the meaning or ordering of the confidence levels, preventing reliable interpretation.
+
+- Code snippet for missing values is only AI generated.

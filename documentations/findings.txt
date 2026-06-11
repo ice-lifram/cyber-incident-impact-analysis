@@ -172,18 +172,15 @@ FORMAL FINDINGS
 	- Attack Vectors (out of 850)
 		- Ransomware, phishing, data breaches are common causes
 	- 412 out of 850 companies are public companies
-	- Downtime (out of 420) 
+	- Downtime (out of 402) 
 		- Mean: 107
 		- Median: 53
 			- Q1 = 25.02
 			- Q3 = 119.800
 		- SD: 184
-		- Lack of Downtime Hours suggests either no downtime occurrence of attacks or undocumented occurrence
 - Attack Vectors + Downtime Correlation
 	- APT, DDoS, Malware, Ransomware, and Supply Chain have recorded downtime hours information
 	- Backdoor, Data Breach, Phishing, and Trojan have no downtime observations recorded
-- The confidence_tier variable was excluded from analysis because the dataset documentation did not define the meaning or ordering of the confidence levels, preventing reliable interpretation.
-
 - Financial Impact
 - Market Impact
 

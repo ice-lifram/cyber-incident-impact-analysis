@@ -1,4 +1,4 @@
-# Incident Profile Analysis
+# Incident Metadata Analysis
 
 import pandas as pd
 
@@ -40,17 +40,32 @@ data_com_rec = df['data_compromised_records'].describe()
 print(data_com_rec)
 
 print()
-# Quality and Confidence Tier
-confidence_tier = df['confidence_tier'].value_counts()
+# Quality Score
 quality_grade = df['quality_grade'].value_counts()
 
-print(confidence_tier)
-print('---------------------')
 print(quality_grade)
 
 print()
 
 # Attack Revenue + Downtime Analysis
-attack_downtime = df.groupby("attack_vector_primary")["downtime_hours"].count()
+attack_downtime = df.groupby("attack_vector_primary")["downtime_hours"].agg([
+    "count",
+    "median",
+    "mean",
+    ])
 
 print(attack_downtime)
+
+# Define all missing values
+print("\nMissing Values")
+print("--------------------")
+
+missing = df.isnull().sum()
+missing_pct = (missing / len(df) * 100).round(2)
+
+missing_df = pd.DataFrame({
+    "Missing Count": missing,
+    "Missing %": missing_pct
+})
+
+print(missing_df.sort_values("Missing %", ascending=False))
