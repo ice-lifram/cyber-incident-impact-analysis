@@ -28,7 +28,6 @@ Findings Before Data Analysis
 
 
 Unique Tickers Audit
--
 ==================================================
 INCIDENT MASTER
 ==================================================

@@ -117,4 +117,13 @@ Length:  358
 - Current changes:
 	- Python scripting for Dataset Analysis + refactoring
 
+Slight redefinition of objectives:
 
+More clearly:
+1. Analyze operational characteristics and severity of cyber incidents on that Incident Masters Dataset (basically more on quali+quanti analysis due to the lack of numerical data; this dataset is now treated as the characteristics of the companies, the common attack vectors, downtime hours, the revenue)
+
+2. Analyze the financial impacts of cyber incidents with the Financial Impact dataset (I can determine it by analyzing the price and volume average losses)
+
+ 3. Analyze the market reaction to cyber incident disclosures using the Market Impact Dataset (basically the same as the financial impacts, but for the prices at the market during cyber incident disclosures. Additionally, the abnormal returns, t-statistics and p-values, market cap, and the volatility)
+
+Since this was a numerical and descriptive statistics, values such as company names, stock tickers, and quality scores are disregarded. Employee counts are also disregarded, as it is highly connected to a specific company.

@@ -156,5 +156,33 @@ backdoor                  30  1.730516e+10  5.253706e+09  70978518.59  1.360091e
 
 - Mean are significantly varying on each attack vectors compared to their median
 
+count     850
+unique    632
+top       ERP
+freq       18
+Name: systems_affected, dtype: object
+
 According to the table:
 - Backdoor attacks have the highest median
+
+-----------------------------------------
+
+FORMAL FINDINGS
+- Incident Profile
+	- Attack Vectors (out of 850)
+		- Ransomware, phishing, data breaches are common causes
+	- 412 out of 850 companies are public companies
+	- Downtime (out of 402) 
+		- Mean: 107
+		- Median: 53
+			- Q1 = 25.02
+			- Q3 = 119.800
+		- SD: 184
+- Attack Vectors + Downtime Correlation
+	- APT, DDoS, Malware, Ransomware, and Supply Chain have recorded downtime hours information
+	- Backdoor, Data Breach, Phishing, and Trojan have no downtime observations recorded
+- Financial Impact
+- Market Impact
+
+
+
