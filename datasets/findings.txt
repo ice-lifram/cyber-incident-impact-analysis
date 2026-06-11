@@ -1,6 +1,6 @@
 # Datasets information gathered through pandas
 
-2026 - 06 - 10
+2026, Jun 10
 
 <class 'pandas.DataFrame'>
 RangeIndex: 850 entries, 0 to 849
@@ -122,3 +122,39 @@ min      1.737931e+05     9.000000e+04       5.703142e+04    1.276379e+04       
 75%      5.259585e+07     2.609037e+07       1.840980e+07    4.756604e+06         2.106179e+06              2.945730e+05      122.017500         8.692943e+09    4.359475e+04
 max      3.451548e+09     2.302300e+09       1.238193e+09    3.828183e+08         5.114644e+07              5.497365e+08     1951.620000         1.488980e+11    1.411332e+06
 
+
+------------------------------------------------------------
+Findings : 2026, Jun 11
+
+- Incidents
+	- Attacks
+	attack_vector_primary
+ransomware      228
+phishing        147
+data_breach     123
+apt              84
+malware          79
+ddos             67
+supply_chain     58
+trojan           34
+backdoor         30
+Name: count, dtype: int64
+
+	- Descriptive stat of Revenue by attack vector (though these are not correlated and are gathered as rather a "technical objective" than actual data analysis, may delete later)
+                      count          mean        median          min           max
+attack_vector_primary                                                              
+ransomware               228  1.016513e+10  9.018502e+08  24241807.28  1.450324e+11
+phishing                 147  7.424785e+09  1.247982e+09  33093201.88  9.037637e+10
+data_breach              123  1.188837e+10  2.196149e+09  31052822.02  1.181101e+11
+apt                       84  1.258862e+10  2.090186e+09  35904910.39  1.488980e+11
+malware                   79  6.760049e+09  5.222583e+08  27180206.20  5.753809e+10
+ddos                      67  9.825495e+09  1.799515e+09  36252630.85  6.800207e+10
+supply_chain              58  1.688599e+10  1.539281e+09  31052822.02  1.201928e+11
+trojan                    34  4.313556e+09  4.730981e+08  37943169.83  5.242108e+10
+backdoor                  30  1.730516e+10  5.253706e+09  70978518.59  1.360091e+11
+
+
+- Mean are significantly varying on each attack vectors compared to their median
+
+According to the table:
+- Backdoor attacks have the highest median

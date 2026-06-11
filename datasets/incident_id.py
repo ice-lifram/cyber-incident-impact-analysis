@@ -1,34 +1,17 @@
-# hand coded na kasi napagod sa prompts lmao
-# a draft code for data scraping and analysis
+# Incident IDs Analysis
 
-incident = pd.read_csv('incidents_master.csv')
+import pandas as pd
+
+incidents = pd.read_csv('incidents_master.csv')
 finance = pd.read_csv('financial_impact.csv')
 market = pd.read_csv('market_impact.csv')
 
-
-id_masters = incident['incident_id']
+id_masters = incidents['incident_id']
 id_finance = finance['incident_id']
 id_market = market['incident_id']
 
-merged = incident.merge(
-    finance,
-    on="incident_id",
-    how="inner"
-)
-
-print(merged.shape)
-
-full = merged.merge(
-    market,
-    on="incident_id",
-    how="left"
-)
-
-print(full)
-
-# Venn Diagram - find all values that are THE SAME/COMMON to all datasets
 common_ids = (
-    set(incident["incident_id"])
+    set(incidents["incident_id"])
     & set(finance["incident_id"])
     & set(market["incident_id"])
 )
@@ -36,18 +19,19 @@ common_ids = (
 print("Total common IDs, ", len(common_ids))
 
 
-incident_ids = set(incident["incident_id"])
+incident_ids = set(incidents["incident_id"])
 financial_ids = set(finance["incident_id"])
 market_ids = set(market["incident_id"])
 
-print("Only in Financial:")
+print("Unique in Financial:")
 print(len(financial_ids - incident_ids))
 
-print("Only in Market:")
+print("Unique in Market:")
 print(len(market_ids - incident_ids))
 
-print("In all three:")
+print("Similar to all three:")
 print(len(incident_ids & financial_ids & market_ids))
 
 print("Data Points of Market")
 print("Length: ", len(market["incident_id"]))
+

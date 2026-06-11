@@ -76,3 +76,45 @@ Day 1.2
 - Possible path
 	- Create three separate analysis for the three datasets, as there are Incident IDs in one dataset that doesn't appear in others
 	- Selective analysis for the Incident IDs that do appear in all three datasets, though this may lead to bias.
+
+----------------------------------------------------
+Day 2: Continuation of EDA + Preliminary Data Analysis
+Total common IDs,  329
+Unique in Financial:
+0
+Unique in Market:
+0
+Similar to all three:
+329
+Data Points of Market
+Length:  358
+
+- All Financial Data Points and Market Data Points have matching results
+- 329 over 358 data points are similar in all data points
+
+- Final methodology decision: Multistage analysis of datasets
+	- Stage 1: Operational Incidents Masters Analysis (n = 850)
+		- The most common attack vectors
+		- The impact of each attacks on companies
+			- Includes downtime hours, data compromised records
+		- Quality Score and Grade Analysis
+		- Qualitative Analysis on the datasets' additional notes
+	- Stage 2: Financial Impact Analysis (n = 778)
+		- Direct Losses
+		- Total Losses
+		- Ransoms
+	- Stage 3: Market Impact Analysis (n = 357)
+		- Price before, during, and after disclosure
+		- Volume average
+		- Abnormal returns
+		- T statistic and p values
+		- Pre and post incident volatility
+		- Days to price recovery
+
+	- Note, n = population size
+
+
+- Current changes:
+	- Python scripting for Dataset Analysis + refactoring
+
+
