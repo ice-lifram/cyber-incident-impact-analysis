@@ -45,9 +45,8 @@ quality_grade = df['quality_grade'].value_counts()
 
 print(quality_grade)
 
-print()
-
 # Attack Revenue + Downtime Analysis
+print("\nAttack Vector + Downtime Hours Analysis")
 attack_downtime = df.groupby("attack_vector_primary")["downtime_hours"].agg([
     "count",
     "median",
@@ -55,6 +54,37 @@ attack_downtime = df.groupby("attack_vector_primary")["downtime_hours"].agg([
     ])
 
 print(attack_downtime)
+
+# Attack Vector + Data Compromised Records Analysis
+print("\nAttack Vector + Data Compromised Analysis")
+record_compromised = df.groupby("attack_vector_primary")["data_compromised_records"].agg([
+    "count",
+    "mean",
+    "median",
+])
+print(record_compromised)
+
+print()
+
+# Industries affected
+industries = df['industry_primary'].value_counts()
+print(industries)
+industries_downtime = df.groupby('industry_primary')['downtime_hours'].agg([
+    "count",
+    "mean",
+    "median"
+])
+print(industries_downtime)
+
+print()
+
+industries_records = df.groupby("industry_primary")['data_compromised_records'].agg([
+    "count",
+    "mean",
+    "median"
+])
+print(industries_records)
+
 
 # Define all missing values
 print("\nMissing Values")
