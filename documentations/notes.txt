@@ -1,24 +1,3 @@
-ROE:
-Methods of Analysis
-- Z-score
-A Z-score quantifies the distance of a data point from the mean in terms of standard deviations. 
-
-Z = (X - mu) / sigma
-Where:
-
-Z = Z-score
-X = specific data point
-μ (mu) = mean of the dataset
-σ (sigma) = standard deviation of the dataset
-
-If z-score is greater than 3 or less than -3
-
-z > 2, unusual
-z > 3, anomalous
-
-- Mean Assets
-- Standard Deviation
-
 Dataset: https://www.kaggle.com/datasets/aryanmdev/cyber-attacks-financial-and-market-impact
 
 What does the dataset contain?
@@ -127,3 +106,21 @@ More clearly:
  3. Analyze the market reaction to cyber incident disclosures using the Market Impact Dataset (basically the same as the financial impacts, but for the prices at the market during cyber incident disclosures. Additionally, the abnormal returns, t-statistics and p-values, market cap, and the volatility)
 
 Since this was a numerical and descriptive statistics, values such as company names, stock tickers, and quality scores are disregarded. Employee counts are also disregarded, as it is highly connected to a specific company.
+
+
+MINDSET SHIFT
+	- Utilize AI more to automate tasks that are considered tedious to save time and enhance efficiency. The results automated by AI will be cross-verified by myself.
+
+----------------------------------------
+Redefinition of Project
+- Analyze the relationsheep between cyber incidents and their impacts on financial and market values.
+- By moving from descriptive statistics to predictive modeling
+
+------------------------------------------
+1. Summing up the descriptive statistics of three datasets using Claude Code to automate the task
+	- Setting up Excel file that contains central tendencies of each dataset + the combination of datasets based on the incident IDs that appeared to all three datasets
+
+2. Cross-verify by conducting my own descriptive analysis using Python.
+
+3. Automate Cross-Relational Analysis with Claude Code; to be verified and to conduct my own analysis
+

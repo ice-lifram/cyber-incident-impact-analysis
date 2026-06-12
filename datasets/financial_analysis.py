@@ -4,7 +4,7 @@ import pandas as pd
 
 df = pd.read_csv('financial_impact.csv')
 
-print(df.info())
+print(df)
 
 print("------------------")
 print(df.describe())
@@ -17,7 +17,7 @@ insurance_payout = df['insurance_payout_usd']
 regulatory_fine = df['regulatory_fine_usd']
 total_loss_method = df['total_loss_method']
 ransom_demanded = df['ransom_demanded_usd']
-ransom_paid = df['ransom_paid']
+ransom_paid = df['ransom_paid_usd']
 ransom_source = df['ransom_source']
 
 print()
@@ -38,3 +38,17 @@ print(insurance_payout.describe())
 
 print()
 # Ransom Demanded
+print(ransom_demanded.describe())
+
+# Ransom Paid
+print(ransom_paid.describe())
+
+print()
+# Ransom Source
+print(ransom_source.value_counts())
+
+print()
+
+# Calculations
+# 1. Direct, Ransoms, Recovery, and Insurance costs
+

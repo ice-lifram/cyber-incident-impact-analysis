@@ -16,6 +16,7 @@ print(df.describe())
 print("------------------------------------")
 pd.set_option('display.max_rows', None)
 
+"""
 print()
 
 # Number of Attack Vectors
@@ -99,3 +100,5 @@ missing_df = pd.DataFrame({
 })
 
 print(missing_df.sort_values("Missing %", ascending=False))
+
+"""

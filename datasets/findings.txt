@@ -184,7 +184,7 @@ FORMAL FINDINGS
 	- Backdoor, Data Breach, Phishing, and Trojan have no downtime observations recorded
 - The confidence_tier variable was excluded from analysis because the dataset documentation did not define the meaning or ordering of the confidence levels, preventing reliable interpretation.
 
-- Financial Impact
+- Financial Impact (778 rows)
 	- Direct Losses
 		- Mean = ~$36,522,940.00
 		- Median = ~$8,525,071.00
@@ -200,6 +200,29 @@ FORMAL FINDINGS
 		- Median = ~$6,129,803.00
 		- Min = ~$57,931.42
 		- Max = ~$1,238,193,000.00
+	- Insurance Payout
+		- Mean = ~$26,650,440.00
+		- Median = ~$6,316,200.00
+		- Min = ~$62,801.04
+		- Max = ~$1,054,416,000.00
+	- Ransoms:
+		- Ransom Demanded
+			- Total = 206 demands
+			- Mean = ~$8,017,672.00
+			- Median = ~$1,979,266.00
+			- Min = $50,000.00
+			- Max = $75,000,000.00
+		- Ransom Paid
+			- Total = 86 paid
+			- Mean = ~$4,497,464.00
+			- Median = ~$1,129,759.00
+			- Min = ~$16,100.98
+			- Max = ~$51,884,180.00
+		- Ransom Source (documentation/evidence source of a ransom incidents
+			- Congressional testimony, blockchain analysis, FBI disclosure results the most number of ransom source
+		- 
+	
+
 - Market Impact
 
 
