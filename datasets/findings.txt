@@ -195,7 +195,11 @@ FORMAL FINDINGS
 		- Median = ~$16,564,910.00
 		- Min = ~$173,793.10
 		- Max = ~$3,451,548,000.00
-
+	- Recovery Costs
+		- Mean = ~$26,185,560.00
+		- Median = ~$6,129,803.00
+		- Min = ~$57,931.42
+		- Max = ~$1,238,193,000.00
 - Market Impact
 
 
