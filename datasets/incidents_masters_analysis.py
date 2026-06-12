@@ -45,7 +45,7 @@ quality_grade = df['quality_grade'].value_counts()
 
 print(quality_grade)
 
-# Attack Revenue + Downtime Analysis
+# Attack Vectors + Downtime Analysis
 print("\nAttack Vector + Downtime Hours Analysis")
 attack_downtime = df.groupby("attack_vector_primary")["downtime_hours"].agg([
     "count",

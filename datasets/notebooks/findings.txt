@@ -185,17 +185,6 @@ FORMAL FINDINGS
 - The confidence_tier variable was excluded from analysis because the dataset documentation did not define the meaning or ordering of the confidence levels, preventing reliable interpretation.
 
 - Financial Impact
-	- Direct Losses
-		- Mean = ~$36,522,940.00
-		- Median = ~$8,525,071.00
-		- Min = ~$90,000.00
-		- Max = ~$2,302,300,000.00
-	- Total Losses
-		- Mean = ~$70,996,000.00
-		- Median = ~$16,564,910.00
-		- Min = ~$173,793.10
-		- Max = ~$3,451,548,000.00
-
 - Market Impact
 
 

@@ -131,4 +131,7 @@ Since this was a numerical and descriptive statistics, values such as company na
 ---------------------------------------
 The confidence_tier variable was excluded from analysis because the dataset documentation did not define the meaning or ordering of the confidence levels, preventing reliable interpretation.
 
-- Code snippet for missing values is only AI generated.
+- Code snippet for missing values is only AI generated
+
+
+- Direct losses refer to immediate, quantifiable damages caused by a disaster, such as physical damage to property. Indirect losses are the secondary effects, like lost income or business interruptions, that arise as a consequence of the direct losses, while total losses encompass both direct and indirect losses combined
