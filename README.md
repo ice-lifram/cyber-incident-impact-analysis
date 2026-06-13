@@ -31,10 +31,10 @@ Methodology
             - Market Cap
             - Pre to Post-incident volatility
             - Days to price recovery
-- **Relational Analysis**
+- **Cross-Exploratory Analysis**
     - Data Merging
     - GroupBy Analysis
-- **Model Development**
+- **Predictive Model Development**
     - Feature Selection
     - Model Training
     - Evaluation
@@ -52,6 +52,7 @@ Tools Used
     - Matplotlib (for data visualization)
 - **AI Agents**
     - For brainstorming, code snippets, and automating redundant tasks
+
 
 Current Findings
 -

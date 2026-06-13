@@ -105,6 +105,10 @@ More clearly:
 
  3. Analyze the market reaction to cyber incident disclosures using the Market Impact Dataset (basically the same as the financial impacts, but for the prices at the market during cyber incident disclosures. Additionally, the abnormal returns, t-statistics and p-values, market cap, and the volatility)
 
+ 4. Investigate the Cross-Datasets by identifying the incidents similar to all three datasets and analyze the trends of losses.
+
+5. With the gathered results from analysis, develop a predictive model to estimate financial and market impacts  
+
 Since this was a numerical and descriptive statistics, values such as company names, stock tickers, and quality scores are disregarded. Employee counts are also disregarded, as it is highly connected to a specific company.
 
 
@@ -113,7 +117,8 @@ MINDSET SHIFT
 
 ----------------------------------------
 Redefinition of Project
-- Analyze the relationsheep between cyber incidents and their impacts on financial and market values.
+- Analyze the relationship between cyber incidents and their impacts on financial and market values.
+- or Investigate the financial and market value impact of publicly disclosed cyber incidents and 
 - By moving from descriptive statistics to predictive modeling
 
 ------------------------------------------
@@ -121,6 +126,11 @@ Redefinition of Project
 	- Setting up Excel file that contains central tendencies of each dataset + the combination of datasets based on the incident IDs that appeared to all three datasets
 
 2. Cross-verify by conducting my own descriptive analysis using Python.
-
-3. Automate Cross-Relational Analysis with Claude Code; to be verified and to conduct my own analysis
-
+	
+3. Automate Cross-Relational Analysis with AI; to be verified and to conduct my own analysis
+	- Conduct own cross-exploratory analysis by myself
+		- Utilize the plots as a reference
+4. Time-series Analysis of Incident Losses
+	- Median loss by year
+	- Annual rate of change in median loss
+	- Growth/decline trends

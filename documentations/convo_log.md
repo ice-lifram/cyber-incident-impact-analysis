@@ -639,3 +639,742 @@ Investigate:
 # Current Project Maturity
 
 **Status:** Transitioning from Data Investigation Phase into Formal Statistical Analysis Phase.
+
+-------
+# Cyber Incident Impact Analysis Project Log
+## Project Evolution and Decision History
+
+---
+
+# Initial Project Concept
+
+The project began as a portfolio-oriented cybersecurity and data analytics project using three related datasets:
+
+1. Incident Master Dataset
+2. Financial Impact Dataset
+3. Market Impact Dataset
+
+Initial intention:
+
+- Statistical anomaly detection
+- Cyber incident analysis
+- Financial impact assessment
+- Portfolio project demonstrating data analytics skills
+
+At this stage, objectives were broad and focused primarily on describing datasets.
+
+---
+
+# Early Project Direction
+
+Several project directions were considered:
+
+## Option 1
+Industrial Risk Assessment Analytics
+
+## Option 2
+Security Control Effectiveness Dashboard
+
+## Option 3
+Cyber-Physical Incident Analysis Repository
+
+After discussion, the project gradually shifted toward:
+
+> Cyber Incident Impact Analysis
+
+because the available datasets contained rich financial and market variables.
+
+---
+
+# Initial Roadmap
+
+Initial plan:
+
+1. Dataset exploration
+2. Variable discovery
+3. Exploratory Data Analysis (EDA)
+4. Descriptive statistics
+5. Visualizations
+6. Potential anomaly detection
+
+---
+
+# Dataset Investigation Phase
+
+Three datasets were examined.
+
+## Incident Master Dataset
+
+850 incidents
+
+Contains:
+
+- Company metadata
+- Industry classifications
+- Country information
+- Attack vectors
+- Downtime data
+- Records compromised
+- Quality indicators
+
+Observation:
+
+Mostly categorical variables with only a few quantitative measures.
+
+---
+
+## Financial Impact Dataset
+
+778 incidents
+
+Contains:
+
+- Direct losses
+- Recovery costs
+- Legal fees
+- Regulatory fines
+- Insurance payouts
+- Total losses
+- Inflation-adjusted losses
+
+Observation:
+
+Primary source of financial severity information.
+
+---
+
+## Market Impact Dataset
+
+358 incidents
+
+Contains:
+
+- Stock prices
+- Abnormal returns
+- CAR metrics
+- Volatility measures
+- Recovery periods
+
+Observation:
+
+Suitable for market reaction studies.
+
+---
+
+# Initial Objective Discussion
+
+Original objectives:
+
+1. Analyze operational characteristics.
+2. Analyze financial impacts.
+3. Analyze market reactions.
+
+Problem identified:
+
+These objectives were broad enough that they could be completed using only basic descriptive statistics.
+
+---
+
+# Data Quality Investigation
+
+A significant issue was discovered:
+
+Datasets did not contain the same number of observations.
+
+## Counts
+
+Incident Dataset
+
+850 incidents
+
+Financial Dataset
+
+778 incidents
+
+Market Dataset
+
+358 incidents
+
+Concern:
+
+How can datasets be compared if they contain different numbers of observations?
+
+---
+
+# Common Incident ID Investigation
+
+A set-based comparison was performed.
+
+Using Python:
+
+```python
+set()
+```
+
+Common incident IDs were identified.
+
+Results:
+
+```text
+Common IDs across all datasets: 329
+
+Financial-only IDs: 0
+
+Market-only IDs: 0
+```
+
+Interpretation:
+
+Market dataset is essentially a subset of Financial dataset.
+
+Financial dataset is essentially a subset of Incident dataset.
+
+The three datasets can therefore be merged using the 329 common incidents.
+
+---
+
+# First Major Methodological Decision
+
+Two competing approaches were considered.
+
+## Approach A
+
+Analyze all datasets separately.
+
+Advantages:
+
+- Maximum sample size
+- Simpler analysis
+- No loss of observations
+
+---
+
+## Approach B
+
+Analyze only common IDs.
+
+Advantages:
+
+- Enables direct comparisons
+- Supports correlation and predictive modeling
+
+Disadvantages:
+
+- Significant reduction in sample size
+
+---
+
+# Selected Approach
+
+Balanced approach chosen.
+
+Plan:
+
+### Primary Analysis
+
+Analyze each dataset separately using its full sample size.
+
+### Secondary Analysis
+
+Perform integrated analysis using the 329 common incidents.
+
+This preserves data while enabling cross-dataset insights.
+
+---
+
+# Exploratory Data Analysis (EDA)
+
+EDA was performed on the Incident Master Dataset.
+
+---
+
+## Attack Vector Analysis
+
+Most common attack vectors:
+
+```text
+Ransomware
+Phishing
+Data Breach
+APT
+Malware
+DDoS
+Supply Chain
+Trojan
+Backdoor
+```
+
+Finding:
+
+Ransomware was the dominant attack vector.
+
+---
+
+## Public vs Private Companies
+
+Distribution found to be nearly balanced.
+
+---
+
+## Downtime Analysis
+
+Key observation:
+
+Downtime distribution was highly skewed.
+
+Median was preferred over mean.
+
+Reason:
+
+Extreme incidents heavily inflated average downtime.
+
+---
+
+## Data Compromised Analysis
+
+Similar skewness observed.
+
+Median became preferred measure of central tendency.
+
+---
+
+# Statistical Methodology Discussion
+
+Question raised:
+
+Why use Median + IQR instead of Mean + Standard Deviation?
+
+Conclusion:
+
+Cyber incident data are heavily right-skewed.
+
+Therefore:
+
+Preferred:
+
+- Median
+- IQR
+
+Supplementary:
+
+- Mean
+- Standard Deviation
+
+Both can be reported.
+
+---
+
+# Revenue Variable Discussion
+
+Question:
+
+Should company revenue be used?
+
+Conclusion:
+
+Revenue is more descriptive of companies than incidents.
+
+Revenue does not directly measure cyber impact.
+
+Decision:
+
+Revenue removed from primary analyses.
+
+May be used later in predictive modeling.
+
+---
+
+# Employee Count Discussion
+
+Question:
+
+Should employee count be analyzed?
+
+Conclusion:
+
+Not directly related to incident severity.
+
+Decision:
+
+Removed from primary scope.
+
+---
+
+# Industry Variable Investigation
+
+Discovery:
+
+industry_primary contains NAICS codes.
+
+Examples:
+
+```text
+62
+52
+51
+44-45
+31-33
+```
+
+Interpretation:
+
+Industry classification rather than numerical values.
+
+Decision:
+
+Treat as categorical variable.
+
+---
+
+# Missing Data Investigation
+
+Missing value analysis added.
+
+Purpose:
+
+- Identify unreliable variables
+- Assess completeness
+- Improve dataset understanding
+
+This became a standard component of all analyses.
+
+---
+
+# Downtime Missingness Discovery
+
+Several attack vectors showed:
+
+```text
+Count = 0
+```
+
+for downtime.
+
+Affected vectors:
+
+- Phishing
+- Data Breach
+- Trojan
+- Backdoor
+
+Important conclusion:
+
+Cannot conclude:
+
+> These incidents caused no downtime.
+
+Correct conclusion:
+
+> Downtime information is missing for these incidents.
+
+---
+
+# Portfolio vs Academic Research Discussion
+
+Clarification:
+
+This project is a portfolio project.
+
+Not:
+
+- Thesis
+- Journal article
+- Formal academic research
+
+Implication:
+
+Practical insights are prioritized over methodological perfection.
+
+---
+
+# Interactive CLI Discussion
+
+Idea proposed:
+
+Create a CLI allowing users to request specific analyses.
+
+Decision:
+
+Not prioritized.
+
+Reason:
+
+Portfolio value comes primarily from:
+
+- Analysis
+- Visualizations
+- Documentation
+
+CLI can be added later as a bonus feature.
+
+---
+
+# Jupyter Notebook Decision
+
+Decision:
+
+Adopt Jupyter Notebooks after analysis scripts stabilize.
+
+Reason:
+
+Notebooks are better suited for:
+
+- Documentation
+- Narrative analysis
+- Portfolio presentation
+
+---
+
+# Kaggle Dataset Review
+
+Dataset creator description reviewed.
+
+Key intended use cases:
+
+- Financial loss prediction
+- Market reaction analysis
+- Risk modeling
+- Industry vulnerability comparison
+- Time-series studies
+- Severity classification
+
+This prompted reevaluation of project objectives.
+
+---
+
+# Confidence Tier Investigation
+
+Issue:
+
+Dataset documentation does not define whether:
+
+```text
+1 = Highest Confidence
+```
+
+or
+
+```text
+1 = Lowest Confidence
+```
+
+Decision:
+
+Remove confidence tier from primary analyses.
+
+Reason:
+
+Interpretation cannot be validated.
+
+---
+
+# Objective Redefinition
+
+Original objectives considered too broad.
+
+New structure created.
+
+---
+
+## Objective 1
+
+Operational Analysis
+
+Focus:
+
+- Attack vectors
+- Industries
+- Downtime
+- Data exposure
+
+---
+
+## Objective 2
+
+Financial Impact Analysis
+
+Focus:
+
+- Direct losses
+- Recovery costs
+- Legal fees
+- Regulatory fines
+- Insurance payouts
+- Total losses
+
+---
+
+## Objective 3
+
+Market Reaction Analysis
+
+Focus:
+
+- Abnormal returns
+- CAR metrics
+- Trading volume
+- Volatility
+- Recovery periods
+
+---
+
+## Objective 4
+
+Integrated Impact Analysis
+
+Using:
+
+329 Common Incident IDs
+
+Focus:
+
+- Operational vs Financial
+- Financial vs Market
+- Attack Vector Impact
+
+---
+
+# Predictive Modeling Added
+
+Following consultation with an analyst, predictive modeling was added.
+
+Reason:
+
+Existing objectives could largely be satisfied with descriptive statistics alone.
+
+New objective:
+
+Predict incident severity and financial impact.
+
+Potential target:
+
+```text
+total_loss_usd
+```
+
+Potential features:
+
+- Attack Vector
+- Industry
+- Downtime
+- Records Compromised
+- Public/Private Status
+
+---
+
+# Time-Based Financial Analysis Discussion
+
+Idea proposed:
+
+Analyze losses with respect to incident dates.
+
+Conclusion:
+
+Possible using:
+
+```text
+Median Loss by Year
+```
+
+Prefer:
+
+```text
+inflation_adjusted_usd
+```
+
+over:
+
+```text
+total_loss_usd
+```
+
+to avoid inflation bias.
+
+---
+
+# Calculus Discussion
+
+Question:
+
+Can derivatives be used?
+
+Conclusion:
+
+Yes.
+
+Example:
+
+Median Loss = f(Year)
+
+Derivative interpretation:
+
+Rate of change in incident losses over time.
+
+However:
+
+This is supplementary analysis rather than a primary project objective.
+
+---
+
+# Current Project Structure
+
+Phase 1
+
+Operational Analysis
+
+Phase 2
+
+Financial Impact Analysis
+
+Phase 3
+
+Market Reaction Analysis
+
+Phase 4
+
+Integrated Impact Analysis
+
+Phase 5
+
+Predictive Modeling
+
+---
+
+# Current Status
+
+Completed:
+
+- Dataset investigation
+- Variable investigation
+- Dataset integration assessment
+- Common ID analysis
+- Initial Incident Dataset EDA
+- Missing value assessment
+- Objective redesign
+- Methodology refinement
+
+In Progress:
+
+- Incident Dataset Analysis
+
+Upcoming:
+
+- Financial Impact Analysis
+- Market Impact Analysis
+- Integrated Impact Analysis
+- Predictive Modeling
+- Jupyter Notebook Documentation
+
+---
+
+# Current Working Philosophy
+
+Analyze each dataset independently first.
+
+Extract findings using full sample sizes.
+
+Then:
+
+Use the 329 common incidents for integrated analysis and predictive modeling.
+
+This maximizes available information while maintaining analytical rigor appropriate for a portfolio project.

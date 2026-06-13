@@ -4,11 +4,12 @@ import pandas as pd
 
 df = pd.read_csv('financial_impact.csv')
 
-print(df)
+# print(df)
 
 print("------------------")
-print(df.describe())
+print(df.info())
 
+"""
 direct_losses = df['direct_loss_usd']
 direct_loss_method = df['direct_loss_method']
 recovery_cost = df['recovery_cost_usd']
@@ -51,4 +52,4 @@ print()
 
 # Calculations
 # 1. Direct, Ransoms, Recovery, and Insurance costs
-
+"""
