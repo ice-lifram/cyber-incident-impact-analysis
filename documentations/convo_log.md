@@ -1378,3 +1378,7 @@ Then:
 Use the 329 common incidents for integrated analysis and predictive modeling.
 
 This maximizes available information while maintaining analytical rigor appropriate for a portfolio project.
+
+-----
+-----
+
