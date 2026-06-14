@@ -58,7 +58,7 @@ Current Findings
 -
 - **Incident Profile**
 	- Attack Vectors (850 data points)
-		- Ransomware, phishing, data breaches are common causes
+		- Ransomware, phishing, data breaches yields highest number of appearance in incidents
 	- 412 out of 850 companies are public companies
 	- Downtime (out of 402) 
 		- Mean: 107
@@ -66,9 +66,13 @@ Current Findings
 			- Q1 = 25.02
 			- Q3 = 119.800
 		- Standard Deviation: 184
+        - Median
     -  **Attack Vectors + Downtime Correlation**
-        - APT, DDoS, Malware, Ransomware, and Supply Chain have recorded downtime hours information
+        - Ransomware, supply chain attacks, and APT-related incidents exhibits higher downtime values compared to other attack vectors
 	    -  Backdoor, Data Breach, Phishing, and Trojan have no downtime observations recorded
+    - **Data Compromised Records**
+        - Right-skewed distribution
+        - 
 - **Financial Impact**
     - Direct Losses
         - Ranges from ~$90,000 to ~$2,302,300.00
@@ -79,5 +83,3 @@ Current Findings
     - Ransoms
 
 - **Market Impact**
-
-for in-depth details of findings, look for "datasets/notebooks/findings.txt
