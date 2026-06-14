@@ -122,14 +122,16 @@ Redefinition of Project
 - By moving from descriptive statistics to predictive modeling
 
 ------------------------------------------
-1. Summing up the descriptive statistics of three datasets using Claude Code to automate the task
+1. Summing up the descriptive statistics of each datasets using Claude Code to automate the task
 	- Setting up Excel file that contains central tendencies of each dataset + the combination of datasets based on the incident IDs that appeared to all three datasets
-
+	- Generate code snippets for plots and verify if the plots and values were proper
+	
 2. Cross-verify by conducting my own descriptive analysis using Python.
 	
 3. Automate Cross-Relational Analysis with AI; to be verified and to conduct my own analysis
 	- Conduct own cross-exploratory analysis by myself
 		- Utilize the plots as a reference
+
 4. Time-series Analysis of Incident Losses
 	- Median loss by year
 	- Annual rate of change in median loss

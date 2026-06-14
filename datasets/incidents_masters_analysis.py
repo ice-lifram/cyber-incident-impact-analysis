@@ -1,6 +1,7 @@
 # Incident Metadata Analysis
 
 import pandas as pd
+import matplotlib.pyplot as plt
 
 df = pd.read_csv('incidents_master.csv')
 
@@ -12,17 +13,24 @@ attack_vector = df['attack_vector_primary']
 downtime_hours = df['downtime_hours']
 
 
-print(df.describe())
+# print(df.describe())
 print("------------------------------------")
 pd.set_option('display.max_rows', None)
 
-"""
+
 print()
 
 # Number of Attack Vectors
 attack_vectors_numbers = attack_vector.value_counts()
 print(attack_vectors_numbers)
 
+plt.figure(figsize=(12,20))
+attack_vector_plots = attack_vectors_numbers.plot(kind='bar')
+plt.title("Number of Attack Vector")
+plt.show()
+plt.show()
+
+"""
 print()
 
 # Public/Private Companies

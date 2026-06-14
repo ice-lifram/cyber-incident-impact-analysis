@@ -40,3 +40,15 @@ Assistant guidance: parse dates, resample (daily/monthly), log-transform total_l
 Action: merged inflation_adjusted_usd from datasets/financial_impact.csv into dataset_summary.xlsx sheet 'Combined'.
 Backup created at dataset_summary.backup.xlsx
 Result: 329 rows, 329 non-null inflation_adjusted_usd
+----- 2026-06-14T08:24:10Z -----
+Action: Recommended and redefined values for predictive modeling and time-series analysis.
+Targets: total_loss_usd (use inflation_adjusted_usd), days_to_price_recovery, abnormal_return_1d.
+Key features: attack_vector_primary, industry_primary, company_revenue_usd (log), employee_count (log), is_public_company, data_compromised_records (log1p), downtime_hours (log1p), direct_loss_usd, recovery_cost_usd, insurance_payout_usd, market_cap_at_disclosure, pre/post volatility, quality_score, confidence_tier, incident_date (time features), notes/attack_vector_secondary (text embeddings), missingness flags.
+Transforms: log1p for skewed numeric, median imputation + indicator, target encoding/frequency for high-cardinality cats, RobustScaler for numerical features.
+Time-series: resample (M) with median/sum, decompose, ADF test, use exogenous features, time-based CV (rolling), forecast models (SARIMAX/Prophet/XGBoost/LightGBM with time features).
+Evaluation: MAE/RMSE on original scale, R2, calibration; use quantile methods for intervals.
+Next actions: create preprocessing pipeline, run missingness & distribution report, prototype log-target baseline (linear), tree-based baseline (RF/XGB), and time-aggregation forecasts.
+----- 2026-06-14T09:00:47Z -----
+Action: Analyzed datasets/incidents_nb.ipynb
+Summary: Notebook performs descriptive EDA on incidents_master.csv: df.info(), describe(), attack_vector counts, company type, downtime, data_compromised, industry breakdown, and missingness report. Uses pandas and matplotlib; minimal plotting; no parse_dates or explicit dtype handling; prints outputs.
+Recommendations: add parse_dates, dtype hints, log1p transforms for skewed fields, missingness flags, save summaries/plots, parameterize file paths, and modularize to scripts/notebooks with outputs.
