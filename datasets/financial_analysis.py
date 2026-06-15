@@ -10,6 +10,7 @@ print("------------------")
 print(df.info())
 
 """
+incident_id = df['incident_id']
 direct_losses = df['direct_loss_usd']
 direct_loss_method = df['direct_loss_method']
 recovery_cost = df['recovery_cost_usd']

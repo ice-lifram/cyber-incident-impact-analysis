@@ -121,6 +121,9 @@ Redefinition of Project
 - or Investigate the financial and market value impact of publicly disclosed cyber incidents and 
 - By moving from descriptive statistics to predictive modeling
 
+Categorical variables such as attack vectors, industries, company types, and quality grades were primarily analyzed using frequency distributions and proportions.
+
+Numerical variables such as downtime hours and compromised records were analyzed using descriptive statistics, including measures of central tendency and dispersion. Additional grouped analyses were conducted to evaluate variations in downtime and data exposure across attack vectors and industries.
 ------------------------------------------
 1. Summing up the descriptive statistics of each datasets using Claude Code to automate the task
 	- Setting up Excel file that contains central tendencies of each dataset + the combination of datasets based on the incident IDs that appeared to all three datasets
