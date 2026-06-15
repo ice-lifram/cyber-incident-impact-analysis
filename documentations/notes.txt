@@ -139,3 +139,23 @@ Numerical variables such as downtime hours and compromised records were analyzed
 	- Median loss by year
 	- Annual rate of change in median loss
 	- Growth/decline trends
+
+--------------------
+# Current Status
+
+Completed:
+- Incident Dataset EDA
+- Visualizations
+- Findings
+- Limitations
+
+Next:
+1. Financial Impact Dataset
+2. Market Impact Dataset
+3. Merge Dataset
+4. Predictive Modeling
+
+Notes:
+- Confidence Tier excluded
+- Industry codes require interpretation
+- Missing values documented
